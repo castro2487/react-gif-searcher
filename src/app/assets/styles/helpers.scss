@@ -1,0 +1,8 @@
+/// Convert to REMs function
+ /// @param {Number} target - The value to be converted
+ /// @param {Number} context [$font-size] - The base font size
+ /// @return {Rem} value
+ @function torem($target, $context: $font-size) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0rem;
+}
